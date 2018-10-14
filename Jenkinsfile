@@ -8,7 +8,7 @@ pipeline {
 
         //location of distribution files
         DIST_CONTEXT_DIR = "dist/"
-        APP_NAME = "angular-unit-testing"
+        APP_NAME = "angular-sample"
 
         // these are defaults that will help run openshift automation
         OCP_API_SERVER = "${OPENSHIFT_API_URL}"
