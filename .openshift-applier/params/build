@@ -1,5 +1,4 @@
-PIPELINE_SOURCE_REPOSITORY_URL=https://github.com/mcanoy/ocp-examples.git
-PIPELINE_SOURCE_REPOSITORY_REF=ci-cd
+PIPELINE_SOURCE_REPOSITORY_URL=https://github.com/mcanoy/angular-unit-testing.git
+PIPELINE_SOURCE_REPOSITORY_REF=master
 NAME=angular-sample
 S2I_BASE_IMAGE=httpd:2.4
-PIPELINE_SOURCE_SECRET=git-bot-secret

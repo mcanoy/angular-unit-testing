@@ -3,7 +3,7 @@ openshift_cluster_content:
 - object: app-builds
   content:
   - name: angular-sample-build
-    template: "https://raw.githubusercontent.com/rht-labs/labs-ci-cd/v3.10.0/openshift-templates/s2i-app-build/template-with-secrets.yml"
+    template: "https://raw.githubusercontent.com/rht-labs/labs-ci-cd/master/openshift-templates/s2i-app-build/binary-template-no-secrets.yml"
     params: "{{ playbook_dir }}/params/build"
     namespace: "{{ ci_cd_namespace }}"
     tags:
