@@ -19,6 +19,12 @@ module.exports = function (config) {
       reports: [ 'html', 'lcovonly' ],
       fixWebpackSourcePaths: true
     },
+    customLaunchers: {
+      'ChromeHeadlessNoSandbox': {
+          base: 'ChromeHeadless',
+          flags: [ '--no-sandbox' ],
+      }
+    },
     angularCli: {
       environment: 'dev'
     },

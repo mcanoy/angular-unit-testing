@@ -4,9 +4,12 @@
 /dist
 /tmp
 /out-tsc
+ts-report.json
 
 # dependencies
 /node_modules
+.openshift-applier/roles
+.openshift-applier/apply.retry
 
 # IDEs and editors
 /.idea

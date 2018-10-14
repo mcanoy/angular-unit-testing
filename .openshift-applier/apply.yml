@@ -1,0 +1,10 @@
+---
+- name: Angular Sample
+  hosts: app
+  vars:
+    ci_cd_namespace: mcanoy-ci-cd
+    dev_namespace: mcanoy-dev
+    demo_namespace: mcanoy-demo
+  tasks:
+    - include_role:
+        name: openshift-applier/roles/openshift-applier

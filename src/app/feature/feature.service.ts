@@ -17,6 +17,7 @@ export class FeatureService {
    }
 
   getProducts(): Observable<Product[]> {
+    let lint = "chow";
     const productsUrl = `${this.apiUrl}products`;
     return this.http.get(productsUrl)
       .map(response => response.json());

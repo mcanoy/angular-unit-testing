@@ -1,0 +1,2 @@
+NAME=angular-sample
+DEPLOY_IMAGE_STREAM_TAG_NAME=deployed
