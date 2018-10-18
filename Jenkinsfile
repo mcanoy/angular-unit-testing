@@ -59,7 +59,7 @@ pipeline {
             steps {
                 script{
                     DEV_PROJECT = "${OPENSHIFT_BUILD_NAMESPACE}".reverse().drop(6).reverse()  + "-dev"
-                    applyAnsibleInventory( 'dev' )
+                    applyAnsibleInventory( 'dev', "ci_cd_namespace=${CI_CD_PROJECT}", "dev_namespace=${DEV_PROJECT}" )
                     timeout(5) { // in minutes
                         openshift.loglevel(9)
                         promoteImageWithinCluster( "${CI_CD_PROJECT}/${APP_NAME}:latest", "${DEV_PROJECT}/${APP_NAME}", "deployed" )
@@ -74,7 +74,7 @@ pipeline {
             steps {
                 script{
                     DEMO_PROJECT = "${OPENSHIFT_BUILD_NAMESPACE}".reverse().drop(6).reverse()  + "-demo"
-                    applyAnsibleInventory( 'demo' )
+                    applyAnsibleInventory( 'demo', "ci_cd_namespace=${CI_CD_PROJECT}", "dev_namespace=${DEMO_PROJECT}" )
                     timeout(5) { // in minutes
                         openshift.loglevel(9)
                         promoteImageWithinCluster( "${CI_CD_PROJECT}/${APP_NAME}:latest", "${DEMO_PROJECT}/${APP_NAME}", "deployed" )
